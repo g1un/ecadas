@@ -1,0 +1,13 @@
+/*Customization*/
+.catalog__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.catalog__list .post {
+  width: 33.33%;
+}

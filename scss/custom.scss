@@ -1,0 +1,12 @@
+/*Customization*/
+.catalog {
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+
+    .post {
+      width: 33.33%;
+    }
+  }
+}
