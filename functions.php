@@ -422,3 +422,14 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+/*
+ * Custom function, setting post's category and number per page for home page.
+ */
+function my_home_category( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'cat', '12');
+        $query->set( 'posts_per_page', '3');
+    }
+}
+add_action( 'pre_get_posts', 'my_home_category' );
