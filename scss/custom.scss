@@ -1,13 +1,57 @@
 /*Customization*/
-.catalog {
 
-  &__list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+/*Убираю черную рамку вокруг сайта*/
+body {
+  background: transparent;
 
-    .post {
-      width: 33.33%;
+  &:before,
+  &:after {
+    display: none !important;
+  }
+}
+
+.site {
+  margin: 0;
+}
+
+/*Сетка каталога*/
+.catalog__list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .post {
+    margin-bottom: 30px;
+    width: 33.33%;
+  }
+
+  /*Прячу блок для автора, даты и комментария в каталоге*/
+  .entry-footer {
+    display: none;
+  }
+
+  /*Расширяю контентную часть элемента каталога на всю ширину*/
+  .entry-content {
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: auto !important;
+  }
+
+  /*Редактирование заголовка элемента каталога*/
+  .entry-title {
+    margin-bottom: 0.25em;
+
+    text-align: center;
+
+    a {
+      display: block;
+
+      font-size: 1rem;
+      line-height: 1.2em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      overflow: hidden;
     }
   }
 }

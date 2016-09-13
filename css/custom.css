@@ -1,4 +1,19 @@
+@charset "UTF-8";
 /*Customization*/
+/*Убираю черную рамку вокруг сайта*/
+body {
+  background: transparent;
+}
+
+body:before, body:after {
+  display: none !important;
+}
+
+.site {
+  margin: 0;
+}
+
+/*Сетка каталога*/
 .catalog__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,8 +23,36 @@
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  /*Прячу блок для автора, даты и комментария в каталоге*/
+  /*Расширяю контентную часть элемента каталога на всю ширину*/
+  /*Редактирование заголовка элемента каталога*/
 }
 
 .catalog__list .post {
+  margin-bottom: 30px;
   width: 33.33%;
+}
+
+.catalog__list .entry-footer {
+  display: none;
+}
+
+.catalog__list .entry-content {
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: auto !important;
+}
+
+.catalog__list .entry-title {
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+
+.catalog__list .entry-title a {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
